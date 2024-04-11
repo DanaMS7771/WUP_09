@@ -117,3 +117,4 @@ Our best model is 4(1) because it fills the most categories filled.
 the best model you can get using 2 models is length1 and length3
 
 ## Final Summary Statements
+The best model at all times is 4(1) and the best 2 regresser for perch, pike and roach are length3 and height, length1 and length 3, and length1 and length 3 respectively.
