@@ -106,7 +106,10 @@ regsubsets.out <-
                method = "exhaustive")
 regsubsets.out
 ```
-
+```{r}
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+```
 ### Best Models
 
 ### Best Two regressor model
