@@ -54,9 +54,10 @@ summary.out <- summary(regsubsets.out)
 as.data.frame(summary.out$outmat)
 ```
 ### Best Models
+Our best model is 4(1) because it fills the most categories filled.
 
 ### Best Two regressor model
-
+The best model you can get using 2 models is length3 and height.
 
 ## Pike
 
