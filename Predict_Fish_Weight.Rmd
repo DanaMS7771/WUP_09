@@ -90,29 +90,39 @@ anova(Perchfullup,best.model)
 
 ## Pike
 ```{r}
-
-pwt =  lm(Weight~ Length1 + Length2 + Length3 + Height, data = Pike)
-summary(pwt)
+Pikefullup <- lm(Weight~ .,data=Pike)
+summary.lm(Pikefullup)
 ```
+### Best Models
 
 ```{r}
 library(leaps)
 regsubsets.out <-
-    regsubsets(Weight ~ Length1+ Length2 + Length3 + Height,
+    regsubsets(Weight ~ .,
                data = Pike,
-               nbest = 2,       # 1 best model for each number of predictors
+               nbest = 1,       # 1 best model for each number of predictors
                nvmax = NULL,    # NULL for no limit on number of variables
                force.in = NULL, force.out = NULL,
                method = "exhaustive")
-regsubsets.out
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
 
 ```{r}
-summary.out <- summary(regsubsets.out)
-as.data.frame(summary.out$outmat)
+which.max(summary.out$adjr2)
 ```
-### Best Models
-Our best model is 4(1) because it fills the most categories filled.
+
+```{r}
+summary.out$which[5,]
+```
+
+```{r}
+best.model <- lm(Weight~.,data=Perch)
+summary(best.model)
+```
 
 ### Best Two regressor model
 The best model you can get using 2 models is length1 and length3
