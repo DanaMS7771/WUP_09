@@ -86,7 +86,7 @@ summary(best.model)
 anova(Perchfullup,best.model)
 ```
 ### Best Two regressor model
-The best model you can get using 2 models is length3 and height.
+ The best regression model is the one with the highest adjusted r squared value and that is Height and Width and it has 2 regressors( but this isn't always the case) , so it is the model we're looking for.
 
 ## Pike
 ```{r}
