@@ -125,7 +125,7 @@ summary(best.model)
 ```
 
 ### Best Two regressor model
-The best model you can get using 2 models is length1 and length3
+The best model is the one that has Length1, Length2, Length3, Height and Width , because it has the highest adjusted r squared value. This means that all of these variables together affect the wight of the pike fish the most.
 
 ## Roach
 ```{r}
