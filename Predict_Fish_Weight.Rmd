@@ -167,11 +167,9 @@ summary(best.model)
 ```{r}
 anova(Roachfullup,best.model)
 ```
-### Best Models
-Our best model is 4(1) because it fills the most categories filled.
 
 ### Best Two regressor model
-the best model you can get using 2 models is length1 and length3
+The best regressor model is Length3 and Width, because it has the highest adjusted r squared value, so this means that the Length3 variable and Width variable( together ) affect the weight of the roaches the most.
 
 ## Final Summary Statements
 The best model at all times is 4(1) and the best 2 regresser for perch, pike and roach are length3 and height, length1 and length 3, and length1 and length 3 respectively.
